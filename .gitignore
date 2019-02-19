@@ -1,0 +1,7 @@
+DerivedData
+Pods
+flckrSearch.xcworkspace
+.DS_Store
+/flckrSearch.xcodeproj/xcuserdata/*
+flckrSearch.xcodeproj/project.xcworkspace/xcuserdata
+.build

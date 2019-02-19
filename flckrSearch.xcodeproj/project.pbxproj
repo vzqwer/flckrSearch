@@ -14,6 +14,16 @@
 		7CC9F8BF22133AA700BA9751 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CC9F8BD22133AA700BA9751 /* LaunchScreen.storyboard */; };
 		7CC9F8CA22133AA700BA9751 /* flckrSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC9F8C922133AA700BA9751 /* flckrSearchTests.swift */; };
 		7CC9F8D522133AA700BA9751 /* flckrSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC9F8D422133AA700BA9751 /* flckrSearchUITests.swift */; };
+		7CC9F8E522133BA300BA9751 /* PhotoSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC9F8E422133BA300BA9751 /* PhotoSearchController.swift */; };
+		7CC9F8E72213459500BA9751 /* ViewModeled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC9F8E62213459500BA9751 /* ViewModeled.swift */; };
+		7CC9F8E9221345D900BA9751 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC9F8E8221345D900BA9751 /* BaseViewModel.swift */; };
+		7CC9F8EE22135FDD00BA9751 /* FlickrService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC9F8ED22135FDD00BA9751 /* FlickrService.swift */; };
+		7CC9F8F12213669B00BA9751 /* PhotosList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC9F8F02213669B00BA9751 /* PhotosList.swift */; };
+		7CC9F8F3221366BB00BA9751 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC9F8F2221366BB00BA9751 /* Photo.swift */; };
+		7CC9F8F52213686E00BA9751 /* PhotoSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC9F8F42213686E00BA9751 /* PhotoSearchViewModel.swift */; };
+		C6DEF626F6B646F6A447415E /* Pods_flckrSearchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7ACE75ABFBDE9419F2CBB66 /* Pods_flckrSearchUITests.framework */; };
+		CA252F8DF6FA59AC4B500E68 /* Pods_flckrSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8353441351E771A88827AE92 /* Pods_flckrSearch.framework */; };
+		E48D3A304CE9CE1D5467BCC1 /* Pods_flckrSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7EC66EBADE379EC5400A098 /* Pods_flckrSearchTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		65C95AC3F1FC451BF5BB6994 /* Pods-flckrSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flckrSearch.debug.xcconfig"; path = "Target Support Files/Pods-flckrSearch/Pods-flckrSearch.debug.xcconfig"; sourceTree = "<group>"; };
+		734E98CBE4699025D76C5775 /* Pods-flckrSearchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flckrSearchTests.debug.xcconfig"; path = "Target Support Files/Pods-flckrSearchTests/Pods-flckrSearchTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7CC9F8B122133AA600BA9751 /* flckrSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flckrSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CC9F8B422133AA600BA9751 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7CC9F8B622133AA600BA9751 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +59,20 @@
 		7CC9F8D022133AA700BA9751 /* flckrSearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = flckrSearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CC9F8D422133AA700BA9751 /* flckrSearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flckrSearchUITests.swift; sourceTree = "<group>"; };
 		7CC9F8D622133AA700BA9751 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7CC9F8E422133BA300BA9751 /* PhotoSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSearchController.swift; sourceTree = "<group>"; };
+		7CC9F8E62213459500BA9751 /* ViewModeled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModeled.swift; sourceTree = "<group>"; };
+		7CC9F8E8221345D900BA9751 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		7CC9F8ED22135FDD00BA9751 /* FlickrService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrService.swift; sourceTree = "<group>"; };
+		7CC9F8F02213669B00BA9751 /* PhotosList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosList.swift; sourceTree = "<group>"; };
+		7CC9F8F2221366BB00BA9751 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		7CC9F8F42213686E00BA9751 /* PhotoSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSearchViewModel.swift; sourceTree = "<group>"; };
+		824B595139B28C9240E4E694 /* Pods-flckrSearchUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flckrSearchUITests.debug.xcconfig"; path = "Target Support Files/Pods-flckrSearchUITests/Pods-flckrSearchUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8353441351E771A88827AE92 /* Pods_flckrSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_flckrSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B24437B825263E8BD2607E9D /* Pods-flckrSearchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flckrSearchTests.release.xcconfig"; path = "Target Support Files/Pods-flckrSearchTests/Pods-flckrSearchTests.release.xcconfig"; sourceTree = "<group>"; };
+		B467C55A3267F439C289BC92 /* Pods-flckrSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flckrSearch.release.xcconfig"; path = "Target Support Files/Pods-flckrSearch/Pods-flckrSearch.release.xcconfig"; sourceTree = "<group>"; };
+		CDD19238AC997A213014F5B3 /* Pods-flckrSearchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flckrSearchUITests.release.xcconfig"; path = "Target Support Files/Pods-flckrSearchUITests/Pods-flckrSearchUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F7ACE75ABFBDE9419F2CBB66 /* Pods_flckrSearchUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_flckrSearchUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7EC66EBADE379EC5400A098 /* Pods_flckrSearchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_flckrSearchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA252F8DF6FA59AC4B500E68 /* Pods_flckrSearch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E48D3A304CE9CE1D5467BCC1 /* Pods_flckrSearchTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +96,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6DEF626F6B646F6A447415E /* Pods_flckrSearchUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52852478A4DA345590A2BFBD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8353441351E771A88827AE92 /* Pods_flckrSearch.framework */,
+				F7EC66EBADE379EC5400A098 /* Pods_flckrSearchTests.framework */,
+				F7ACE75ABFBDE9419F2CBB66 /* Pods_flckrSearchUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7CC9F8A822133AA600BA9751 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +120,8 @@
 				7CC9F8C822133AA700BA9751 /* flckrSearchTests */,
 				7CC9F8D322133AA700BA9751 /* flckrSearchUITests */,
 				7CC9F8B222133AA600BA9751 /* Products */,
+				AF2BFF28148E0C0CC95B368D /* Pods */,
+				52852478A4DA345590A2BFBD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +138,18 @@
 		7CC9F8B322133AA600BA9751 /* flckrSearch */ = {
 			isa = PBXGroup;
 			children = (
+				7CC9F8EF2213627700BA9751 /* Models */,
+				7CC9F8EC22135FBB00BA9751 /* Services */,
 				7CC9F8B422133AA600BA9751 /* AppDelegate.swift */,
 				7CC9F8B622133AA600BA9751 /* ViewController.swift */,
 				7CC9F8B822133AA600BA9751 /* Main.storyboard */,
 				7CC9F8BB22133AA700BA9751 /* Assets.xcassets */,
 				7CC9F8BD22133AA700BA9751 /* LaunchScreen.storyboard */,
 				7CC9F8C022133AA700BA9751 /* Info.plist */,
+				7CC9F8E422133BA300BA9751 /* PhotoSearchController.swift */,
+				7CC9F8F42213686E00BA9751 /* PhotoSearchViewModel.swift */,
+				7CC9F8E62213459500BA9751 /* ViewModeled.swift */,
+				7CC9F8E8221345D900BA9751 /* BaseViewModel.swift */,
 			);
 			path = flckrSearch;
 			sourceTree = "<group>";
@@ -125,6 +172,36 @@
 			path = flckrSearchUITests;
 			sourceTree = "<group>";
 		};
+		7CC9F8EC22135FBB00BA9751 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7CC9F8ED22135FDD00BA9751 /* FlickrService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		7CC9F8EF2213627700BA9751 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7CC9F8F02213669B00BA9751 /* PhotosList.swift */,
+				7CC9F8F2221366BB00BA9751 /* Photo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AF2BFF28148E0C0CC95B368D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				65C95AC3F1FC451BF5BB6994 /* Pods-flckrSearch.debug.xcconfig */,
+				B467C55A3267F439C289BC92 /* Pods-flckrSearch.release.xcconfig */,
+				734E98CBE4699025D76C5775 /* Pods-flckrSearchTests.debug.xcconfig */,
+				B24437B825263E8BD2607E9D /* Pods-flckrSearchTests.release.xcconfig */,
+				824B595139B28C9240E4E694 /* Pods-flckrSearchUITests.debug.xcconfig */,
+				CDD19238AC997A213014F5B3 /* Pods-flckrSearchUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +209,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7CC9F8D922133AA700BA9751 /* Build configuration list for PBXNativeTarget "flckrSearch" */;
 			buildPhases = (
+				9E23AC5FD7C3BAADC4399C49 /* [CP] Check Pods Manifest.lock */,
 				7CC9F8AD22133AA600BA9751 /* Sources */,
 				7CC9F8AE22133AA600BA9751 /* Frameworks */,
 				7CC9F8AF22133AA600BA9751 /* Resources */,
+				4146DB8F1DC379030B1AD327 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,9 +228,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7CC9F8DC22133AA700BA9751 /* Build configuration list for PBXNativeTarget "flckrSearchTests" */;
 			buildPhases = (
+				7BBA001BE6BB6A4235C87F76 /* [CP] Check Pods Manifest.lock */,
 				7CC9F8C122133AA700BA9751 /* Sources */,
 				7CC9F8C222133AA700BA9751 /* Frameworks */,
 				7CC9F8C322133AA700BA9751 /* Resources */,
+				10C8591B7C94805EF1B3672D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -167,6 +248,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7CC9F8DF22133AA700BA9751 /* Build configuration list for PBXNativeTarget "flckrSearchUITests" */;
 			buildPhases = (
+				581690862D1B40FB346C75C2 /* [CP] Check Pods Manifest.lock */,
 				7CC9F8CC22133AA700BA9751 /* Sources */,
 				7CC9F8CD22133AA700BA9751 /* Frameworks */,
 				7CC9F8CE22133AA700BA9751 /* Resources */,
@@ -251,13 +333,149 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		10C8591B7C94805EF1B3672D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-flckrSearchTests/Pods-flckrSearchTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-flckrSearchTests/Pods-flckrSearchTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4146DB8F1DC379030B1AD327 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-flckrSearch/Pods-flckrSearch-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-flckrSearch/Pods-flckrSearch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		581690862D1B40FB346C75C2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-flckrSearchUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7BBA001BE6BB6A4235C87F76 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-flckrSearchTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E23AC5FD7C3BAADC4399C49 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-flckrSearch-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7CC9F8AD22133AA600BA9751 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CC9F8F3221366BB00BA9751 /* Photo.swift in Sources */,
 				7CC9F8B722133AA600BA9751 /* ViewController.swift in Sources */,
+				7CC9F8E9221345D900BA9751 /* BaseViewModel.swift in Sources */,
+				7CC9F8EE22135FDD00BA9751 /* FlickrService.swift in Sources */,
+				7CC9F8F52213686E00BA9751 /* PhotoSearchViewModel.swift in Sources */,
+				7CC9F8E72213459500BA9751 /* ViewModeled.swift in Sources */,
 				7CC9F8B522133AA600BA9751 /* AppDelegate.swift in Sources */,
+				7CC9F8E522133BA300BA9751 /* PhotoSearchController.swift in Sources */,
+				7CC9F8F12213669B00BA9751 /* PhotosList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +648,7 @@
 		};
 		7CC9F8DA22133AA700BA9751 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65C95AC3F1FC451BF5BB6994 /* Pods-flckrSearch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -448,6 +667,7 @@
 		};
 		7CC9F8DB22133AA700BA9751 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B467C55A3267F439C289BC92 /* Pods-flckrSearch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -466,6 +686,7 @@
 		};
 		7CC9F8DD22133AA700BA9751 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 734E98CBE4699025D76C5775 /* Pods-flckrSearchTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -487,6 +708,7 @@
 		};
 		7CC9F8DE22133AA700BA9751 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B24437B825263E8BD2607E9D /* Pods-flckrSearchTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +730,7 @@
 		};
 		7CC9F8E022133AA700BA9751 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 824B595139B28C9240E4E694 /* Pods-flckrSearchUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -528,6 +751,7 @@
 		};
 		7CC9F8E122133AA700BA9751 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDD19238AC997A213014F5B3 /* Pods-flckrSearchUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
