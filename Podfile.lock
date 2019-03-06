@@ -15,6 +15,9 @@ PODS:
     - RxSwift (~> 4.0)
   - RxCocoa (4.4.1):
     - RxSwift (~> 4.0)
+  - RxOptional (3.6.2):
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
   - RxSwift (4.4.1):
     - RxAtomic (~> 4.4)
   - RxTest (4.4.1):
@@ -26,6 +29,7 @@ DEPENDENCIES:
   - Moya/RxSwift (~> 12.0)
   - RxBlocking (~> 4.0)
   - RxCocoa (~> 4.0)
+  - RxOptional (= 3.6.2)
   - RxSwift (~> 4.0)
   - RxTest (~> 4.0)
 
@@ -37,6 +41,7 @@ SPEC REPOS:
     - RxAtomic
     - RxBlocking
     - RxCocoa
+    - RxOptional
     - RxSwift
     - RxTest
 
@@ -47,9 +52,10 @@ SPEC CHECKSUMS:
   RxAtomic: f8d6adc1ccb87a767811269e4875887bc74dbf19
   RxBlocking: 5508e90d36ca2304632dc9378ece4e9b5d4bf656
   RxCocoa: 2f35a76bf8887872e28a1914112395b11b8e0e64
+  RxOptional: 80426a0ddbd092573e4c482d8cc13302078c4d5e
   RxSwift: 92fcf68dfef21f3e2ab1965363d9e7b3d787597e
   RxTest: f8e548755ca3c7502dc41c7d3b28802c90115a38
 
-PODFILE CHECKSUM: b5dff93f0ee52be776bafbdd5832d5fbd98bdd80
+PODFILE CHECKSUM: 5c36c931d92fcd057bcfa2cbf302d3aef0dec9f7
 
 COCOAPODS: 1.6.0

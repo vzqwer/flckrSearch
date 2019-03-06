@@ -18,7 +18,7 @@ enum FlickrService {
 // MARK: - TargetType Protocol Implementation
 extension FlickrService: TargetType {
     var baseURL: URL {
-        return URL(string: "https://api.flickr.com/services/rest")!
+        return URL(string: "https://api11.flickr.com/services/rest")!
     }
     
     var path: String {

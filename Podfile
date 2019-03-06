@@ -10,6 +10,7 @@ target 'flckrSearch' do
   pod 'RxCocoa',    '~> 4.0'
   pod 'Moya',       '~> 12.0'
   pod 'Moya/RxSwift', '~> 12.0'
+  pod 'RxOptional', '3.6.2'
 
   target 'flckrSearchTests' do
     inherit! :search_paths

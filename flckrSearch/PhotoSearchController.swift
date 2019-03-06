@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import Moya
+import RxOptional
 
 class PhotoSearchController: UIViewController {
     
@@ -17,6 +18,7 @@ class PhotoSearchController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var collectionViewPhoto: UICollectionView!
     @IBOutlet weak var tableView: UITableView!
+    var collectionView: UICollectionView!
     
     let viewModel = PhotoSearchViewModel()
     private let disposeBag = DisposeBag()
@@ -28,7 +30,7 @@ class PhotoSearchController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        collectionViewPhoto.register(PhotoCell.self, forCellWithReuseIdentifier: "PhotoCell")
+        collectionViewPhoto.register(PhotoCell.self, forCellWithReuseIdentifier: "PhotoCell")
         
 //        let provider = MoyaProvider<FlickrService>()
 //        provider.rx.request(.photosSearch(searchText: "qwe", page: 1, perPage: 10)).subscribe { (singleEvent) in
@@ -49,32 +51,18 @@ class PhotoSearchController: UIViewController {
     }
     
     private func setupBindings() {
-//        searchBar.rx.text.
-        let titles = Observable.from(["1", "2"])
-        
-        titles.bind(to: tableView.rx.items(cellIdentifier: "Cell", cellType: UITableViewCell.self)) { (index, model, cell) in
-                cell.title = model
-            }
-            .disposed(by: disposeBag)
-        
-//        viewModel.repositories
-//            .observeOn(MainScheduler.instance)
-//            .do(onNext: { [weak self] _ in self?.refreshControl.endRefreshing() })
-//            .bind(to: tableView.rx.items(cellIdentifier: "RepositoryCell", cellType: RepositoryCell.self)) { [weak self] (_, repo, cell) in
-//                self?.setupRepositoryCell(cell, repository: repo)
-//            }
-//            .disposed(by: disposeBag)
-        
-//        collectionViewPhoto.rx.items(cellIdentifier: <#T##String#>, cellType: <#T##Cell.Type#>)
+        viewModel.searchTextRelay.bind(to: searchBar.rx.text).disposed(by: disposeBag)
         
         viewModel.photos
-//            .observeOn(MainScheduler.instance)
-            .bind(to: collectionViewPhoto.rx.items(cellIdentifier: "PhotoCell", cellType: PhotoCell.self)) { (index, model, cell) in
-                cell.title = model.title
+            .observeOn(MainScheduler.instance)
+            .bind(to: self.collectionViewPhoto.rx.items) { (collectionView, row, element) in
+                let indexPath = IndexPath(row: row, section: 0)
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as! PhotoCell
+                cell.title.text = element.title
+                return cell
             }
             .disposed(by: disposeBag)
         
-//        viewModel.searchTextRelay = searchBar.rx.text
 //        collectionViewPhoto.rx.modelSelected(Photo.self)
     }
     
