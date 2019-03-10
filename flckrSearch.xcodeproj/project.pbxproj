@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34173A8350D66A8BCF312D08 /* ApiProviderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341737227E449C9C14EB8681 /* ApiProviderImpl.swift */; };
+		34173CC70801ECE4CB2CD25A /* ApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3417396A0890C02916F90FFB /* ApiProvider.swift */; };
 		7CC9F8B522133AA600BA9751 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC9F8B422133AA600BA9751 /* AppDelegate.swift */; };
 		7CC9F8B722133AA600BA9751 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC9F8B622133AA600BA9751 /* ViewController.swift */; };
 		7CC9F8BA22133AA600BA9751 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CC9F8B822133AA600BA9751 /* Main.storyboard */; };
@@ -45,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		341737227E449C9C14EB8681 /* ApiProviderImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiProviderImpl.swift; sourceTree = "<group>"; };
+		3417396A0890C02916F90FFB /* ApiProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiProvider.swift; sourceTree = "<group>"; };
 		65C95AC3F1FC451BF5BB6994 /* Pods-flckrSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flckrSearch.debug.xcconfig"; path = "Target Support Files/Pods-flckrSearch/Pods-flckrSearch.debug.xcconfig"; sourceTree = "<group>"; };
 		734E98CBE4699025D76C5775 /* Pods-flckrSearchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flckrSearchTests.debug.xcconfig"; path = "Target Support Files/Pods-flckrSearchTests/Pods-flckrSearchTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7CC9F8B122133AA600BA9751 /* flckrSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flckrSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -179,6 +183,8 @@
 			isa = PBXGroup;
 			children = (
 				7CC9F8ED22135FDD00BA9751 /* FlickrService.swift */,
+				3417396A0890C02916F90FFB /* ApiProvider.swift */,
+				341737227E449C9C14EB8681 /* ApiProviderImpl.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -482,6 +488,8 @@
 				7CC9F8B522133AA600BA9751 /* AppDelegate.swift in Sources */,
 				7CC9F8E522133BA300BA9751 /* PhotoSearchController.swift in Sources */,
 				7CC9F8F12213669B00BA9751 /* PhotosList.swift in Sources */,
+				34173CC70801ECE4CB2CD25A /* ApiProvider.swift in Sources */,
+				34173A8350D66A8BCF312D08 /* ApiProviderImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,14 +15,18 @@ class PhotoSearchViewModel {
     let title = "flckrSearch"
     
     // MARK: - Input
+    let searchTex = Variable
     let searchTextRelay = BehaviorRelay<String>(value: "")
     
     // MARK: - Output
     let searchResult: Observable<PhotosList>
     let photos: Observable<[Photo]>
 //    let searchFailed: Observable<Error>
+
+    let apiProvider: ApiProvider
     
-    init(flickrProvider: MoyaProvider<FlickrService> = MoyaProvider<FlickrService>()) {
+    init(apiProvider: ApiProvider = ApiProviderImpl(flickrProvider: MoyaProvider<FlickrService>())) {
+        self.apiProvider = apiProvider
 
         let searchRequest = searchTextRelay
                 .distinctUntilChanged()
@@ -43,7 +47,9 @@ class PhotoSearchViewModel {
         
     }
 
-    private func requestPhotos() {
-
+    private func requestPhotos(text: String, page: Int, perPage: Int) -> Result<Photos, Error> {
+        apiProvider.request(.photosSearch(searchText: text, page: page, perPage: perPage)) { (result) in
+            return result
+        }
     }
 }
