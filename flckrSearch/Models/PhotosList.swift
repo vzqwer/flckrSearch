@@ -22,4 +22,14 @@ struct PhotosList: Decodable {
         let photosContainer = try container.nestedContainer(keyedBy: RatingsCodingKeys.self, forKey: .photos)
         self.photos = try photosContainer.decode([Photo].self, forKey: .photo)
     }
+
+    private init() {
+        photos = []
+    }
+}
+
+extension PhotosList {
+    static func emptyPhotoList() -> PhotosList {
+        return PhotosList()
+    }
 }

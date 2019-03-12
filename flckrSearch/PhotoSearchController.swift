@@ -32,29 +32,13 @@ class PhotoSearchController: UIViewController {
 
         collectionViewPhoto.register(PhotoCell.self, forCellWithReuseIdentifier: "PhotoCell")
         
-//        let provider = MoyaProvider<FlickrService>()
-//        provider.rx.request(.photosSearch(searchText: "qwe", page: 1, perPage: 10)).subscribe { (singleEvent) in
-//            switch singleEvent {
-//            case .success(let response):
-//                let rsp = try! response.mapString()
-//                NSLog(rsp)
-//
-//                let photoList = try! JSONDecoder().decode(PhotosList.self, from: response.data)
-//                NSLog(photoList.photos.count.description)
-//                NSLog(photoList.photos.description)
-//            case .error(let error):
-//                NSLog(error.localizedDescription)
-//            }
-//        }
-        
         setupBindings()
     }
     
     private func setupBindings() {
-        viewModel.searchTextRelay.bind(to: searchBar.rx.text).disposed(by: disposeBag)
-        
-        viewModel.photos
-            .observeOn(MainScheduler.instance)
+        searchBar.rx.text.orEmpty.bind(to: viewModel.searchTextRelay).disposed(by: disposeBag)
+
+        viewModel.photos.asObservable()
             .bind(to: self.collectionViewPhoto.rx.items) { (collectionView, row, element) in
                 let indexPath = IndexPath(row: row, section: 0)
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as! PhotoCell
