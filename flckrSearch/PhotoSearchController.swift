@@ -29,9 +29,6 @@ class PhotoSearchController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        collectionViewPhoto.register(PhotoCell.self, forCellWithReuseIdentifier: "PhotoCell")
-        
         setupBindings()
     }
     
@@ -39,10 +36,12 @@ class PhotoSearchController: UIViewController {
         searchBar.rx.text.orEmpty.bind(to: viewModel.searchTextRelay).disposed(by: disposeBag)
 
         viewModel.photos.asObservable()
-            .bind(to: self.collectionViewPhoto.rx.items) { (collectionView, row, element) in
+            .bind(to: self.collectionViewPhoto.rx.items) { (collectionView, row, photo) in
                 let indexPath = IndexPath(row: row, section: 0)
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as! PhotoCell
-                cell.title.text = element.title
+                let cellViewModel = PhotoCellViewModel(photo)
+                cell.bindViewModel(viewModel: cellViewModel)
+//                cell.title.text = photo.id
                 return cell
             }
             .disposed(by: disposeBag)

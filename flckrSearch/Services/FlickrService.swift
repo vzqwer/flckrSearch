@@ -13,32 +13,40 @@ private let apiSecret = "6946b63702b27a14"
 
 enum FlickrService {
     case photosSearch(searchText: String, page: Int, perPage: Int)
+    case fetchPhoto(id: String, secret: String, server: String, farm: Int)
 }
 
 // MARK: - TargetType Protocol Implementation
 extension FlickrService: TargetType {
     var baseURL: URL {
-        return URL(string: "https://api.flickr.com/services/rest")!
+//        switch self {
+//        case .photosSearch:
+//            return URL(string: "https://api.flickr.com/services/rest")!
+//        case .fetchPhoto:
+//            return URL(string: "https://api.flickr.com/services/rest")!
+//        }
+        return URL(string: "https://")!
     }
     
     var path: String {
-//        switch self {
-//        case .photosSearch(let searchText, let page):
-//            return "=&=\(apiKey)&text=\(searchText)&format=json&nojsoncallback=1&auth_token=72157705210128411-4604d5029d272221&api_sig=c276b68646f3047ee4855b509e1b57a1"
-//        }
-        return ""
+        switch self {
+        case .photosSearch:
+            return "api.flickr.com/services/rest"
+        case .fetchPhoto(let id, let secret, let server, let farm):
+            return "farm\(farm).staticflickr.com/\(server)/\(id)_\(secret).jpg"
+        }
     }
     
     var method: Method {
         switch self {
-        case .photosSearch:
+        case .photosSearch, .fetchPhoto:
             return .get
         }
     }
     
     var sampleData: Data {
         switch self {
-        case .photosSearch:
+        default:
             return Data()
         }
     }
@@ -54,6 +62,8 @@ extension FlickrService: TargetType {
                                                    "format" : "json",
                                                    "nojsoncallback" : 1,
                                                    ], encoding: URLEncoding.queryString)
+        default:
+            return .requestPlain
         }
     }
     

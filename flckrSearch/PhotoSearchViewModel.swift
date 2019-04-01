@@ -13,6 +13,7 @@ import Moya
 class PhotoSearchViewModel {
     // MARK: - Properties
     let title = "flckrSearch"
+    let apiProvider: ApiProvider
     
     // MARK: - Input
     let searchTextRelay = BehaviorRelay<String>(value: "")
@@ -21,9 +22,8 @@ class PhotoSearchViewModel {
     let searchResult: Driver<PhotosList>
     let photos: Driver<[Photo]>
     let searchFailed: Driver<Error>
-
-    let apiProvider: ApiProvider
     
+    // MARK: - Methods
     init(apiProvider: ApiProviderImpl = ApiProviderImpl(flickrProvider: MoyaProvider<FlickrService>())) {
         self.apiProvider = apiProvider
 
@@ -33,7 +33,7 @@ class PhotoSearchViewModel {
                 .distinctUntilChanged()
                 .filter { !$0.isEmpty }
                 .flatMap { searchText -> Observable<PhotosList> in
-                    return apiProvider.requestPhotos(text: searchText, page: 1, perPage: 20).debug("requestPhotos").asObservable()
+                    return apiProvider.requestPhotos(text: searchText, page: 1, perPage: 20).asObservable()
                 }
 
         searchResult = searchRequest
@@ -50,10 +50,4 @@ class PhotoSearchViewModel {
                 .asDriver(onErrorJustReturn: UnknownError())
         
     }
-
-//    private func requestPhotos(text: String, page: Int, perPage: Int) -> Result<Photos, Error> {
-//        apiProvider.request(.photosSearch(searchText: text, page: page, perPage: perPage)) { (result) in
-//            return result
-//        }
-//    }
 }

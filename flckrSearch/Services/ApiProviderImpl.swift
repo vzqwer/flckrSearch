@@ -35,6 +35,30 @@ class ApiProviderImpl: ApiProvider {
                 cancellable?.cancel()
             }
         }
+    }
 
+    func requestPhoto(_ photo: Photo) -> Single<UIImage?> {
+        return Single.create { [weak self] singleObserver in
+            let cancellable = self?.moyaProvider.request(.fetchPhoto(id: photo.id, secret: photo.secret, server: photo.server, farm: photo.farm), completion: { (result) in
+                switch result {
+                case .success(let response):
+                    do {
+                        if let image = UIImage(data: response.data) {
+                            singleObserver(.success(image))
+                        } else {
+                            singleObserver(.error(UnknownError()))
+                        }
+                    } catch {
+                        singleObserver(.error(error))
+                    }
+                case .failure(let moyaError):
+                    singleObserver(.error(moyaError))
+                }
+            })
+            
+            return Disposables.create {
+                cancellable?.cancel()
+            }
+        }
     }
 }
