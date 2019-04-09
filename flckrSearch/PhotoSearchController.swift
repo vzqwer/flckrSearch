@@ -18,6 +18,8 @@ class PhotoSearchController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var collectionViewPhoto: UICollectionView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var labelNoData: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     var collectionView: UICollectionView!
     
     let viewModel = PhotoSearchViewModel()
@@ -41,11 +43,23 @@ class PhotoSearchController: UIViewController {
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as! PhotoCell
                 let cellViewModel = PhotoCellViewModel(photo)
                 cell.bindViewModel(viewModel: cellViewModel)
-//                cell.title.text = photo.id
                 return cell
             }
             .disposed(by: disposeBag)
         
+        viewModel.noData.asObservable()
+            .bind(onNext: { [weak self] (noData) in
+                self?.collectionViewPhoto.isHidden = noData
+                self?.labelNoData.isHidden = !noData
+            })
+            .disposed(by: disposeBag)
+        
+        viewModel.inProgress.asObservable()
+            .map({!$0})
+            .bind(to: self.activityIndicator.rx.isHidden).disposed(by: disposeBag)
+        
+        viewModel.inProgress.asObservable()
+            .bind(to: self.collectionViewPhoto.rx.isHidden).disposed(by: disposeBag)
 //        collectionViewPhoto.rx.modelSelected(Photo.self)
     }
     

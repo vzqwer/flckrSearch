@@ -52,6 +52,12 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Нет данных" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vn6-26-j8l">
+                                <rect key="frame" x="82.5" y="341.5" width="210" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ora-oy-8SG">
                                 <rect key="frame" x="0.0" y="120" width="375" height="547"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -95,22 +101,32 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="5Ng-T9-qzb">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ora-oy-8SG" firstAttribute="top" secondItem="HsU-VZ-0gb" secondAttribute="bottom" id="Afl-3D-Lrx"/>
+                            <constraint firstItem="5Ng-T9-qzb" firstAttribute="centerY" secondItem="Bmd-yZ-FwN" secondAttribute="centerY" id="BbZ-T8-zmz"/>
                             <constraint firstItem="ora-oy-8SG" firstAttribute="leading" secondItem="oOw-HQ-Sgp" secondAttribute="leading" id="FTI-JZ-3Uu"/>
+                            <constraint firstItem="5Ng-T9-qzb" firstAttribute="centerX" secondItem="Bmd-yZ-FwN" secondAttribute="centerX" id="FVi-2Y-TGU"/>
                             <constraint firstItem="HsU-VZ-0gb" firstAttribute="trailing" secondItem="oOw-HQ-Sgp" secondAttribute="trailing" id="IgG-Lj-Fcx"/>
+                            <constraint firstItem="vn6-26-j8l" firstAttribute="centerX" secondItem="oOw-HQ-Sgp" secondAttribute="centerX" id="Mka-t0-dSI"/>
                             <constraint firstItem="ora-oy-8SG" firstAttribute="bottom" secondItem="oOw-HQ-Sgp" secondAttribute="bottom" id="b0n-Am-OOc"/>
                             <constraint firstItem="ora-oy-8SG" firstAttribute="trailing" secondItem="oOw-HQ-Sgp" secondAttribute="trailing" id="kEd-Tq-qgy"/>
                             <constraint firstItem="HsU-VZ-0gb" firstAttribute="top" secondItem="oOw-HQ-Sgp" secondAttribute="top" id="lNg-Em-udm"/>
+                            <constraint firstItem="vn6-26-j8l" firstAttribute="centerY" secondItem="oOw-HQ-Sgp" secondAttribute="centerY" id="q0G-0x-nL5"/>
                             <constraint firstItem="HsU-VZ-0gb" firstAttribute="leading" secondItem="oOw-HQ-Sgp" secondAttribute="leading" id="vTk-Dl-OoZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oOw-HQ-Sgp"/>
                     </view>
                     <navigationItem key="navigationItem" id="luJ-Kq-sA3"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="5Ng-T9-qzb" id="JiP-9e-uJk"/>
                         <outlet property="collectionViewPhoto" destination="ora-oy-8SG" id="DCg-71-fSq"/>
+                        <outlet property="labelNoData" destination="vn6-26-j8l" id="Gva-SW-3A7"/>
                         <outlet property="searchBar" destination="HsU-VZ-0gb" id="nCb-WW-8ee"/>
                     </connections>
                 </viewController>

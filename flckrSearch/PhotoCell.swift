@@ -16,8 +16,20 @@ class PhotoCell: UICollectionViewCell {
     var viewModel = PhotoCellViewModel(nil)
     private let disposeBag = DisposeBag()
     
+    private func clearCell() {
+        self.imageView.image = UIImage.photoPlaceHolder()
+        self.title.text = ""
+    }
+    
     func bindViewModel(viewModel: PhotoCellViewModel) {
+        clearCell()
+        
         self.viewModel = viewModel
-        self.viewModel.image.asObservable().bind(to: self.imageView.rx.image).disposed(by: self.disposeBag)
+        self.viewModel.title.asObservable()
+            .bind(to: self.title.rx.text)
+            .disposed(by: self.disposeBag)
+        self.viewModel.image.asObservable()
+            .bind(to: self.imageView.rx.image)
+            .disposed(by: self.disposeBag)
     }
 }

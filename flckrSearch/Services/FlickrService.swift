@@ -6,6 +6,7 @@
 //  Copyright © 2019 Oleg Shulakov. All rights reserved.
 //
 
+import Foundation
 import Moya
 
 private let apiKey = "dcd0eb1cba36610453a6a6da6d46257b"
@@ -19,25 +20,24 @@ enum FlickrService {
 // MARK: - TargetType Protocol Implementation
 extension FlickrService: TargetType {
     var baseURL: URL {
-//        switch self {
-//        case .photosSearch:
-//            return URL(string: "https://api.flickr.com/services/rest")!
-//        case .fetchPhoto:
-//            return URL(string: "https://api.flickr.com/services/rest")!
-//        }
-        return URL(string: "https://")!
+        switch self {
+        case .photosSearch:
+            return URL(string: "https://api.flickr.com")!
+        case .fetchPhoto(_, _, _, let farm):
+            return URL(string: "https://farm\(farm).staticflickr.com")!
+        }
     }
     
     var path: String {
         switch self {
         case .photosSearch:
-            return "api.flickr.com/services/rest"
-        case .fetchPhoto(let id, let secret, let server, let farm):
-            return "farm\(farm).staticflickr.com/\(server)/\(id)_\(secret).jpg"
+            return "services/rest"
+        case .fetchPhoto(let id, let secret, let server, _):
+            return "\(server)/\(id)_\(secret).jpg"
         }
     }
     
-    var method: Method {
+    var method: Moya.Method {
         switch self {
         case .photosSearch, .fetchPhoto:
             return .get
