@@ -29,7 +29,7 @@ class PhotoSearchViewModel {
     init(apiProvider: ApiProviderImpl = ApiProviderImpl(flickrProvider: MoyaProvider<FlickrService>())) {
         self.apiProvider = apiProvider
 
-        let inPrgrs = BehaviorRelay.init(value: false)
+        let inPrgrs = BehaviorRelay(value: false)
         
         let searchRequest = searchTextRelay
                 .debounce(RxTimeInterval.init(0.3), scheduler: MainScheduler.init())
